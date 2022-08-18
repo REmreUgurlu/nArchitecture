@@ -9,7 +9,7 @@ namespace Persistence.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "SomeFeatureEntities",
+                name: "Brands",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -18,24 +18,24 @@ namespace Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SomeFeatureEntities", x => x.Id);
+                    table.PrimaryKey("PK_Brands", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
-                table: "SomeFeatureEntities",
+                table: "Brands",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { 1, "Test 1" });
+                values: new object[] { 1, "BMW" });
 
             migrationBuilder.InsertData(
-                table: "SomeFeatureEntities",
+                table: "Brands",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { 2, "Test 2" });
+                values: new object[] { 2, "Mercedes" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "SomeFeatureEntities");
+                name: "Brands");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Domain.Entities.SomeFeatureEntity", b =>
+            modelBuilder.Entity("Domain.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,18 +37,18 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SomeFeatureEntities", (string)null);
+                    b.ToTable("Brands", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Name = "Test 1"
+                            Name = "BMW"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Test 2"
+                            Name = "Mercedes"
                         });
                 });
 #pragma warning restore 612, 618

@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Application.Services.Repositories
 {
-    public interface ISomeFeatureEntityRepository : IAsyncRepository<SomeFeatureEntity>, IRepository<SomeFeatureEntity>
+    public interface IBrandRepository : IAsyncRepository<Brand>, IRepository<Brand>
     {
+
     }
 }
